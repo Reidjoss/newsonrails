@@ -49,3 +49,7 @@ end
 gem "rails_admin"
 
 gem "devise"
+
+gem "cancancan"
+
+gem 'paper_trail'
