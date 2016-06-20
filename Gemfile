@@ -45,3 +45,7 @@ group :development do
   gem 'spring'
 end
 
+# Rails Admin
+gem "rails_admin"
+
+gem "devise"
