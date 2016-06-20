@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "articles#list"
+  devise_for :users
+  root "articles#index"
   resources :articles
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
