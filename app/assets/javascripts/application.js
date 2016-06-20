@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require tether
 //= require bootstrap-sprockets #TODO bytt ut med komprimert Bootstrap i production
-//= require turbolinks
+// dont require turbolinks
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

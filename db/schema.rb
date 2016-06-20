@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160620220221) do
+ActiveRecord::Schema.define(version: 20160620230959) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "headline",       limit: 255
@@ -22,6 +22,22 @@ ActiveRecord::Schema.define(version: 20160620220221) do
     t.boolean  "published"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+  end
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "article_id", limit: 4
+    t.integer  "tag_id",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "taggings", ["article_id"], name: "index_taggings_on_article_id", using: :btree
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,4 +81,6 @@ ActiveRecord::Schema.define(version: 20160620220221) do
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
   add_index "versions", ["transaction_id"], name: "index_versions_on_transaction_id", using: :btree
 
+  add_foreign_key "taggings", "articles"
+  add_foreign_key "taggings", "tags"
 end
