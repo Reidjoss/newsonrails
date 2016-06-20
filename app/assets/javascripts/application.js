@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require tether
+//= require bootstrap-sprockets #TODO bytt ut med komprimert Bootstrap i production
 //= require turbolinks
 //= require_tree .
