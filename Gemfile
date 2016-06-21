@@ -48,20 +48,22 @@ end
 # Rails Admin
 gem "rails_admin"
 
+# Authentication
 gem "devise"
 
+# Authorization
 gem "cancancan"
 
+# Versioning
 gem 'paper_trail'
 
 # Bootstrap
-
 gem 'bootstrap', '~> 4.0.0.alpha3' #TODO følg med på utvikling av Bootstrap 4
 
+# Tether
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 
 # Tagging
-
 gem "foundation-rails"
