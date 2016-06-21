@@ -1,0 +1,2 @@
+module NorHelper
+end

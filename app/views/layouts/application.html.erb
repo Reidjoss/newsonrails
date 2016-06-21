@@ -13,10 +13,19 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="container-fluid">
 
-    <%= yield %>
+      <%= render "nor/topmenu" %>
 
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <% if user_signed_in? %>
+        <%= render "nor/adminmenu" %>
+      <% end %>
+
+      <%= yield %>
+
+  </div><!--container-fluid-->
   </body>
 </html>

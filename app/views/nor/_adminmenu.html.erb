@@ -1,0 +1,21 @@
+<div class="topspacer"></div>
+<nav class="navbar navbar-full navbar-fixed-bottom navbar-dark bg-inverse">
+  <a class="navbar-brand" href="/nor/settings"><%= current_user.name %></a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="/articles/write">New article<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/articles/list">List articles</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/nor/dashboard">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/logout">Logout</a>
+    </li>
+  </ul>
+  <span class="pull-xs-right">
+    NOR <%= nor_version %>
+  </span>
+</nav>
